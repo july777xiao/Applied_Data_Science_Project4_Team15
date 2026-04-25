@@ -25,24 +25,32 @@ project4/
 ├── README.md
 ├── requirements.txt
 │
-├── 1_data_acquisition.py        # API calls, web scraping, panel construction
-├── 2_data_cleaning.py           # Full cleaning pipeline
-├── 3_eda_clustering.py          # EDA, PCA, KMeans (Person B)
-├── 4_feature_engineering.py     # Feature encoding and construction (Person C)
-├── 5_modeling.py                # Model training and evaluation (Person C + D)
+├── src/
+│   ├── 1_data_acquisition.py        # API calls, web scraping, panel construction
+│   ├── 2_data_cleaning.py           # Data cleaning and preprocessing pipeline
+│   ├── 3_eda_clustering.py          # EDA, PCA, KMeans (Person B)
+│   ├── 4_feature_engineering.py     # Feature encoding and construction (Person C)
+│   └── 5_modeling.py                # Model training and evaluation (Person C + D)
 │
-├── app.py                       # Streamlit web application
+├── app/
+│   └── app.py                       # Streamlit web application
 │
-├── raw/
-│   ├── nyc_restaurant_panel.csv         # Raw merged panel (before cleaning)
-│   ├── restaurant_clean.csv             # Final cleaned dataset (41,556 rows × 52 cols)
-│   └── restaurant_yelp_subset.csv       # Yelp-matched subset (8,279 rows)
+├── data/
+│   ├── raw/
+│   │   └── nyc_restaurant_panel_raw.csv     # Raw merged dataset (before cleaning)
+│   │
+│   └── processed/
+│       ├── restaurant_clean.csv             # Final cleaned dataset (41,556 rows × 52 cols)
+│       └── restaurant_yelp_subset.csv       # Yelp-matched subset (8,279 rows)
 │
-└── models/
-    └── best_model.pkl                   # Final trained model (for web app)
+├── models/
+│   └── best_model.pkl               # Final trained model (used in web app)
+│
+└── notebooks/                      # Optional: exploratory analysis notebooks
 ```
 
 ---
+
 
 ## Data Sources
 
