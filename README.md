@@ -1,7 +1,9 @@
-# Health, Hygiene & Hype
-## Predicting Restaurant Inspection Outcomes and Customer Ratings in New York City
+# Project 4: Predicting Restaurant Inspection Failures in New York City
+## A Multi-Source Machine Learning Approach
 
-> Columbia University · GR5243 Applied Data Science · Spring 2026 · Project 4
+> Columbia University · GU4243/GR5243 Applied Data Science · Spring 2026 · Team 15
+>
+> Shuzhi Yang (sy3321) · Pingyu Zhou (pz2341) · Junyang Li (jl7230) · Xiao Xiao (xx2492)
 
 ---
 
@@ -61,8 +63,8 @@ project4/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/[your-org]/project4.git
-cd project4
+git clone https://github.com/[your-org]/Applied_Data_Science_Project4_Team15.git
+cd Applied_Data_Science_Project4_Team15
 ```
 
 ### 2. Install dependencies
@@ -239,7 +241,7 @@ Pages:
 
 | Member | Role | Responsibilities |
 |--------|------|-----------------|
-| [Member A] | Data Acquisition + Web App | Data pipeline (`1_data_acquisition.py`, `2_data_cleaning.py`), Streamlit app (`app.py`), GitHub management |
+| Xiao Xiao (xx2492) | Data Acquisition + Web App | Data pipeline (`1_data_acquisition.py`, `2_data_cleaning.py`), Streamlit app (`app.py`) |
 | [Member B] | EDA + Unsupervised Learning | `3_eda_clustering.py`, EDA visualizations, PCA, KMeans clustering |
 | [Member C] | Feature Engineering + Baseline Model | `4_feature_engineering.py`, Logistic Regression, feature selection |
 | [Member D] | Modeling + Final Model Selection | `5_modeling.py`, Random Forest, XGBoost, model comparison, final model |
@@ -272,7 +274,3 @@ shap>=0.42
 - Yelp Fusion API: https://docs.developer.yelp.com/docs/fusion-intro
 - Open-Meteo Historical Weather API: https://open-meteo.com
 - U.S. Census Bureau ACS 2022: https://api.census.gov/data/2022/acs/acs5
-
----
-
-*Columbia University · GR5243 Applied Data Science · Spring 2026*
