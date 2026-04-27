@@ -1,0 +1,8 @@
+chart_file,exists,recommended_use
+figures/model_comparison_table.png,True,Report Section 6 / PPT final model comparison
+figures/model_performance_comparison.png,True,PPT visual model comparison
+figures/model_roc_comparison.png,True,Report Section 5 ROC comparison
+figures/final_model_roc_curve.png,True,Optional final model appendix or PPT backup
+figures/final_model_confusion_matrix.png,True,Report Section 6 final model selection
+figures/final_model_threshold_tuning.png,True,Report Section 5 threshold tuning
+figures/final_model_feature_importance.png,True,Report Section 6 interpretation / PPT recommendation

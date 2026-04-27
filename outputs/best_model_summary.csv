@@ -1,0 +1,2 @@
+Model,Selected threshold,Accuracy,Precision,Recall,F1,ROC-AUC,Reason
+Logistic Regression,0.46999999999999986,0.5703022339027596,0.24479166666666666,0.6367393800229622,0.3536313205381623,0.6301673049408172,"Best balance of recall, F1-score, ROC-AUC, and interpretability"
