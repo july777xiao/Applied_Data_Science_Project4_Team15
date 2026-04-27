@@ -1,0 +1,16 @@
+Excluded Feature,Reason
+score,Directly defines failed; using it would leak the target.
+grade,Directly reflects inspection outcome.
+score_bucket,"Derived from score, therefore leaks target information."
+action,Post-inspection administrative outcome.
+violation_count,Current inspection violation count is only known during/after inspection.
+critical_count,Current inspection critical violations are only known during/after inspection.
+critical_ratio,Derived from current inspection violations.
+score_trend,"Uses current score, therefore leaks outcome information."
+cluster,Part B cluster may use score/violation variables; excluded for leakage-safe modeling.
+camis,"Restaurant ID, not generalizable."
+dba,"Restaurant name, not generalizable."
+inspection_date,Raw date replaced by engineered temporal features.
+latitude,High missingness; not used directly.
+longitude,High missingness; not used directly.
+zipcode,High cardinality; borough captures broader location context.
