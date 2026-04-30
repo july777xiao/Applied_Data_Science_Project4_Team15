@@ -577,8 +577,4 @@ critical in a public health context where regulators need to trust model decisio
         "<div style='text-align:center;color:#9ca3af;font-size:0.85rem;'>"
         "Columbia University · GU4243/GR5243 Applied Data Science · Spring 2026 · Team 15"
         # "Columbia University · STAT GR5243/GU4243 Applied Data Science · Fall 2026 · Team 15"
-<<<<<<< HEAD
         "</div>", unsafe_allow_html=True)
-=======
-        "</div>", unsafe_allow_html=True)
->>>>>>> e38f3dbded5bddea264aecf239810cc9dd596a6f
