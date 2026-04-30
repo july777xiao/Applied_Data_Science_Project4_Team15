@@ -1,9 +1,0 @@
-violation_code,severity,category
-04L,critical,food_temperature
-04N,critical,food_contamination
-06D,critical,personal_hygiene
-08A,not_critical,vermin
-10F,not_critical,facility
-10B,not_critical,facility
-02B,critical,food_source
-09C,not_critical,other
