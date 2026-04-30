@@ -1,0 +1,16 @@
+feature,importance,absolute_importance,feature_clean
+cat__yelp_category_primary_movietheaters,-0.3998300383806107,0.3998300383806107,Yelp: movietheaters
+cat__yelp_category_primary_bars,-0.4032615343223536,0.4032615343223536,Yelp: bars
+cat__cuisine_grouped_Thai,0.4143953174226463,0.4143953174226463,Cuisine: Thai
+cat__yelp_category_primary_burgers,0.4219424711244035,0.4219424711244035,Yelp: burgers
+cat__cuisine_grouped_Latin American,0.4427203073587188,0.4427203073587188,Cuisine: Latin American
+cat__yelp_category_primary_lounges,-0.4467272708761759,0.4467272708761759,Yelp: lounges
+num__has_history,-0.446922455803549,0.446922455803549,has history
+cat__yelp_category_primary_caribbean,-0.4591665391569773,0.4591665391569773,Yelp: caribbean
+cat__yelp_category_primary_hotdogs,-0.4695109366850332,0.4695109366850332,Yelp: hotdogs
+cat__yelp_category_primary_latin,-0.4786730477980435,0.4786730477980435,Yelp: latin
+cat__yelp_category_primary_restaurants,0.4788749087475644,0.4788749087475644,Yelp: restaurants
+cat__cuisine_grouped_Korean,0.5253401802847826,0.5253401802847826,Cuisine: Korean
+cat__cuisine_grouped_Chinese,0.5397490455425845,0.5397490455425845,Cuisine: Chinese
+cat__cuisine_grouped_Hamburgers,-0.7107960573548338,0.7107960573548338,Cuisine: Hamburgers
+cat__cuisine_grouped_Donuts,-1.222360069155114,1.222360069155114,Cuisine: Donuts

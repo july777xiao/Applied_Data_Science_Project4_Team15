@@ -1,0 +1,4 @@
+Model,Accuracy,Precision,Recall,F1,ROC-AUC,Best Params
+Logistic Regression,0.6220592598872451,0.2533261222282315,0.5377726750861079,0.34441176470588236,0.6301673526890239,"{'model__C': 0.1, 'model__penalty': 'l2'}"
+Gradient Boosting,0.8152685346106566,0.2,0.0002296211251435132,0.00045871559633027525,0.61592233778084,"{'model__learning_rate': 0.05, 'model__max_depth': 2, 'model__n_estimators': 200}"
+Random Forest,0.7186638972489509,0.27079148252310165,0.3095292766934558,0.28886745955212684,0.6138366782145703,"{'model__max_depth': 12, 'model__min_samples_leaf': 10, 'model__n_estimators': 200}"
