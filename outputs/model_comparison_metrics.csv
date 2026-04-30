@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 Model,Best Params,Accuracy,Precision,Recall,F1,ROC-AUC
 Logistic Regression,"{'model__C': 0.1, 'model__penalty': 'l2'}",0.6220592598872451,0.2533261222282315,0.5377726750861079,0.34441176470588236,0.6301673526890239
 Gradient Boosting,"{'model__learning_rate': 0.05, 'model__max_depth': 2, 'model__n_estimators': 200}",0.8152685346106566,0.2,0.0002296211251435132,0.00045871559633027525,0.61592233778084
 Random Forest,"{'model__max_depth': 12, 'model__min_samples_leaf': 10, 'model__n_estimators': 200}",0.7186638972489509,0.27079148252310165,0.3095292766934558,0.28886745955212684,0.6138366782145703
+=======
+Model,Best Params,Accuracy,Precision,Recall,F1,ROC-AUC
+Logistic Regression,"{'model__C': 0.1, 'model__penalty': 'l2'}",0.6220592598872451,0.2533261222282315,0.5377726750861079,0.34441176470588236,0.6301673049408172
+Gradient Boosting,"{'model__learning_rate': 0.05, 'model__max_depth': 2, 'model__n_estimators': 200}",0.8152685346106566,0.2,0.0002296211251435132,0.00045871559633027525,0.61592233778084
+Random Forest,"{'model__max_depth': 8, 'model__min_samples_leaf': 10, 'model__n_estimators': 200}",0.6517315925564834,0.25398241366127183,0.45763490241102184,0.32666775938370757,0.6134858602042335
+>>>>>>> e38f3dbded5bddea264aecf239810cc9dd596a6f

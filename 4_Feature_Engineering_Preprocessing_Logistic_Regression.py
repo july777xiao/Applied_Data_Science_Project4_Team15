@@ -2,6 +2,59 @@
 # This section builds a **leakage-safe, interpretable, and business-oriented baseline model** for predicting NYC restaurant inspection failure.
 # The goal of this part is not to repeat the EDA, PCA, or KMeans analysis from Part B. Instead, we transform available **pre-inspection information** into a supervised learning pipeline that helps identify high-risk restaurants before inspections take place.
 
+<<<<<<< HEAD
+=======
+# ### Target Variable
+# **failed = 1** → the restaurant failed the inspection  
+# **failed = 0** → the restaurant passed the inspection
+
+# Our objective is not only to predict failure, but also to support **inspection prioritization and public-health risk control**. Since missing a truly risky restaurant (False Negative) is more costly than performing one extra inspection (False Positive), recall and threshold tuning are especially important.
+
+
+# ### Leakage Prevention
+# To avoid **target leakage**, variables directly related to current inspection outcomes are excluded:
+# `score`, `grade`, `violation_count`, `critical_count`, and `score_trend`
+
+# These variables are only observed during or after inspection and would create unrealistic prediction performance.
+# Instead, we focus on leakage-safe predictors such as:
+
+# - restaurant profile information  
+# - Yelp reputation signals  
+# - complaint intensity  
+# - inspection history  
+# - weather and seasonality  
+# - borough-level socioeconomic context
+
+
+# ### Feature Engineering
+# We construct several **business-driven features** to improve predictive power:
+# - **poor_history_flag** → prior failure or high previous inspection score
+# - **complaint_intensity** → combined food, rodent, and food-safety complaint pressure
+# - **complaint_density** → complaint volume normalized by borough population
+# - **high_complaint_flag** → unusually high complaint environment
+# - **log_yelp_reviews** → Yelp visibility and review-volume signal
+
+# ### Why Logistic Regression
+
+# Logistic Regression is selected because **interpretability is critical** in regulatory decision systems.
+# Compared with black-box models, it provides:
+
+# - transparent coefficient interpretation  
+# - clear risk factor explanation  
+# - easier policy communication
+
+# This makes it a strong baseline for inspection risk prediction.
+
+# ### Threshold Tuning
+# Instead of using the default threshold of **0.50**, we apply **threshold tuning** to improve Recall and F1-score.
+# Because false negatives are costly in public-health settings, optimizing the classification threshold helps better identify truly risky restaurants.
+# Restaurants with predicted failure probability above the optimized threshold are flagged as:
+# ### High-Priority Inspection Candidates
+# This makes the model a practical **inspection prioritization system**, not just a simple classifier.
+
+# This section directly addresses the project requirements on **feature engineering, preprocessing, supervised modeling, evaluation, interpretation, and business recommendation**.
+
+>>>>>>> e38f3dbded5bddea264aecf239810cc9dd596a6f
 
 import os
 import warnings
@@ -35,6 +88,7 @@ os.makedirs("outputs", exist_ok=True)
 os.makedirs("models", exist_ok=True)
 os.makedirs("figures", exist_ok=True)
 
+<<<<<<< HEAD
 # # ## 1. Load Cleaned Data
 # # The input file is the cleaned restaurant inspection dataset produced by the earlier data cleaning pipeline. The full project dataset was constructed from multiple sources, including NYC restaurant inspection records, Yelp business data, weather data, 311 food-related complaints, and census demographics. :contentReference[oaicite:1]{index=1}
 # # Although Part B created PCA and KMeans outputs, this section does **not** reuse clustering labels if those labels were generated using current inspection outcome variables. This keeps the supervised model strictly leakage-safe.
@@ -73,6 +127,24 @@ df = pd.read_csv(clean_path, low_memory=False)
 df["inspection_date"] = pd.to_datetime(df["inspection_date"], errors="coerce")
 
 print("Loaded:", clean_path)
+=======
+# ## 1. Load Cleaned Data
+# The input file is the cleaned restaurant inspection dataset produced by the earlier data cleaning pipeline. The full project dataset was constructed from multiple sources, including NYC restaurant inspection records, Yelp business data, weather data, 311 food-related complaints, and census demographics. :contentReference[oaicite:1]{index=1}
+# Although Part B created PCA and KMeans outputs, this section does **not** reuse clustering labels if those labels were generated using current inspection outcome variables. This keeps the supervised model strictly leakage-safe.
+
+
+clean_path = '/Users/apple/Desktop/Final 4:29 Pre 5:5 ddl/Data/restaurant_clean.csv'
+
+if os.path.exists(clean_path):
+    df = pd.read_csv(clean_path, low_memory=False)
+    print("Loaded:", clean_path)
+else:
+    df = pd.read_csv("/mnt/data/restaurant_clean.csv", low_memory=False)
+    print("Loaded from /mnt/data/restaurant_clean.csv")
+
+df["inspection_date"] = pd.to_datetime(df["inspection_date"], errors="coerce")
+
+>>>>>>> e38f3dbded5bddea264aecf239810cc9dd596a6f
 print("Data shape:", df.shape)
 df.head()
 

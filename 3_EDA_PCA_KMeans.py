@@ -46,6 +46,7 @@ except ModuleNotFoundError as exc:
 
 RANDOM_STATE = 42
 
+<<<<<<< HEAD
 ROOT     = Path.cwd()
 DATA_DIR = ROOT / "raw"
 FIG_DIR  = ROOT / "figures"
@@ -53,6 +54,15 @@ FIG_DIR.mkdir(parents=True, exist_ok=True)
 
 assert (DATA_DIR / "restaurant_clean.csv").exists(), \
     f"Missing file: {DATA_DIR / 'restaurant_clean.csv'}"
+=======
+ROOT = Path.cwd()
+if not (ROOT / "data" / "processed" / "restaurant_clean.csv").exists():
+    ROOT = ROOT.parent
+
+DATA_DIR = ROOT / "data" / "processed"
+FIG_DIR = ROOT / "figures" / "person_b"
+FIG_DIR.mkdir(parents=True, exist_ok=True)
+>>>>>>> e38f3dbded5bddea264aecf239810cc9dd596a6f
 
 sns.set_theme(style="whitegrid", context="notebook")
 plt.rcParams.update({
