@@ -531,13 +531,7 @@ Columbia University GU4243/GR5243 Applied Data Science, Project 4, Team 15.
 7. Web App             → This dashboard
 ```
 
-#### Team Contributions — Team 15
-| Member | UNI | Role |
-|--------|-----|------|
-| Xiao Xiao | xx2492 | Data acquisition, cleaning pipeline, and web application development |
-| Shuzhi Yang | sy3321 | Exploratory data analysis, PCA dimensionality reduction, and KMeans clustering |
-| Pingyu Zhou | pz2341 | Feature engineering, leakage prevention, and logistic regression baseline |
-| Junyang Li | jl7230 | Supervised modeling, hyperparameter tuning, and final model selection |
+
 """)
 
     st.markdown("---")
