@@ -71,7 +71,7 @@ def load_data():
     #                     low_memory=False, parse_dates=['inspection_date'])
     df   = pd.read_csv(os.path.join(BASE,'data','processed','restaurant_clean.csv'),
                     low_memory=False, parse_dates=['inspection_date'])
-     yelp = pd.read_csv(os.path.join(BASE,'data','processed','restaurant_yelp_subset.csv'),
+    yelp = pd.read_csv(os.path.join(BASE,'data','processed','restaurant_yelp_subset.csv'),
                     low_memory=False, parse_dates=['inspection_date'])
     return df, yelp
 
