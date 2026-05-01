@@ -3,6 +3,6 @@ pandas
 numpy
 plotly
 pydeck
-scikit-learn==1.3.0
-joblib==1.3.2
+scikit-learn==1.8.0
+joblib==1.5.3
 statsmodels
