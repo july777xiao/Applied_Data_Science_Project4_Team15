@@ -65,10 +65,14 @@ FIG  = os.path.join(BASE, "figures")
 
 @st.cache_data
 def load_data():
-    df   = pd.read_csv(os.path.join(BASE,'raw','restaurant_clean.csv'),
-                        low_memory=False, parse_dates=['inspection_date'])
-    yelp = pd.read_csv(os.path.join(BASE,'raw','restaurant_yelp_subset.csv'),
-                        low_memory=False, parse_dates=['inspection_date'])
+    # df   = pd.read_csv(os.path.join(BASE,'raw','restaurant_clean.csv'),
+    #                     low_memory=False, parse_dates=['inspection_date'])
+    # yelp = pd.read_csv(os.path.join(BASE,'raw','restaurant_yelp_subset.csv'),
+    #                     low_memory=False, parse_dates=['inspection_date'])
+    df   = pd.read_csv(os.path.join(BASE,'data','processed','restaurant_clean.csv'),
+                    low_memory=False, parse_dates=['inspection_date'])
+     yelp = pd.read_csv(os.path.join(BASE,'data','processed','restaurant_yelp_subset.csv'),
+                    low_memory=False, parse_dates=['inspection_date'])
     return df, yelp
 
 @st.cache_resource
