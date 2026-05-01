@@ -21,6 +21,26 @@
 
 ---
 
+## ⚡ Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/july777xiao/Applied_Data_Science_Project4_Team15.git
+cd Applied_Data_Science_Project4_Team15
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch the web application (data and model already included)
+streamlit run app.py
+```
+
+> The web app is also deployed at: https://july777xiaoapplieddatascienceproject4team15.streamlit.app
+>
+> To reproduce the full pipeline from scratch (data acquisition → modeling), see **How to Run** below.
+
+---
+
 ## Project Overview
 
 Food safety is a critical public health concern in New York City, where the Department of Health and Mental Hygiene (DOHMH) conducts tens of thousands of restaurant inspections each year. This project addresses the question: **can we predict whether a restaurant will fail its next health inspection before the inspector arrives?**
