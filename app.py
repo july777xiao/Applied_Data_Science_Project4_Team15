@@ -1,7 +1,7 @@
 """
 app.py — NYC Restaurant Health & Rating Dashboard
-运行方式: streamlit run app.py
-依赖: pip install streamlit pandas numpy plotly pydeck scikit-learn joblib
+run: streamlit run app.py
+pip install streamlit pandas numpy plotly pydeck scikit-learn joblib
 """
 
 import streamlit as st
@@ -251,51 +251,80 @@ elif page == "📈 EDA Insights":
 
     with tab1:
         st.markdown("### Core Distributions")
-        if os.path.exists(fp("01_univariate_core_distributions.png")):
-            st.image(fp("01_univariate_core_distributions.png"), use_container_width=True)
-        if os.path.exists(fp("02_univariate_context_distributions.png")):
-            st.image(fp("02_univariate_context_distributions.png"), use_container_width=True)
-        if os.path.exists(fp("00_missingness_audit.png")):
-            st.image(fp("00_missingness_audit.png"), caption="Missingness Audit", use_container_width=True)
+        col1, col2 = st.columns(2)
+        with col1:
+            if os.path.exists(fp("fig01a_outcome_score.png")):
+                st.image(fp("fig01a_outcome_score.png"), caption="Outcome Counts & Score Distribution", use_container_width=True)
+            if os.path.exists(fp("fig01c_grade_timing.png")):
+                st.image(fp("fig01c_grade_timing.png"), caption="Grade Distribution & Monthly Volume", use_container_width=True)
+        with col2:
+            if os.path.exists(fp("fig01b_violations.png")):
+                st.image(fp("fig01b_violations.png"), caption="Violation Count Distributions", use_container_width=True)
+            if os.path.exists(fp("fig02a_borough_cuisine.png")):
+                st.image(fp("fig02a_borough_cuisine.png"), caption="Borough & Cuisine Distributions", use_container_width=True)
+        if os.path.exists(fp("fig02b_yelp_rating_price.png")):
+            st.image(fp("fig02b_yelp_rating_price.png"), caption="Yelp Rating & Price Tier", use_container_width=True)
 
     with tab2:
         st.markdown("### Bivariate Relationships")
-        if os.path.exists(fp("03_bivariate_core_relationships.png")):
-            st.image(fp("03_bivariate_core_relationships.png"), use_container_width=True)
-        col1,col2 = st.columns(2)
+        col1, col2 = st.columns(2)
         with col1:
-            if os.path.exists(fp("04_bivariate_yelp_weather_time.png")):
-                st.image(fp("04_bivariate_yelp_weather_time.png"), use_container_width=True)
+            if os.path.exists(fp("fig03a_score_violation.png")):
+                st.image(fp("fig03a_score_violation.png"), caption="Score by Outcome & Violation Failure Rate", use_container_width=True)
+            if os.path.exists(fp("fig03c_trend_firstrepeat.png")):
+                st.image(fp("fig03c_trend_firstrepeat.png"), caption="Score Trend & First vs Repeat", use_container_width=True)
         with col2:
-            if os.path.exists(fp("05_bivariate_borough_cuisine.png")):
-                st.image(fp("05_bivariate_borough_cuisine.png"), use_container_width=True)
-        if os.path.exists(fp("08_target_correlation_bars.png")):
-            st.image(fp("08_target_correlation_bars.png"), caption="Feature Correlation with Target", use_container_width=True)
+            if os.path.exists(fp("fig03b_critical_history.png")):
+                st.image(fp("fig03b_critical_history.png"), caption="Critical Violations & Historical Scores", use_container_width=True)
+            if os.path.exists(fp("fig04b_monthly_temp_failure.png")):
+                st.image(fp("fig04b_monthly_temp_failure.png"), caption="Monthly & Temperature Failure Rates", use_container_width=True)
+        col1, col2 = st.columns(2)
+        with col1:
+            if os.path.exists(fp("fig04a_yelp_vs_outcome.png")):
+                st.image(fp("fig04a_yelp_vs_outcome.png"), caption="Yelp Rating vs Inspection Outcome", use_container_width=True)
+        with col2:
+            if os.path.exists(fp("fig08_target_correlations.png")):
+                st.image(fp("fig08_target_correlations.png"), caption="Feature Correlations with Failure Target", use_container_width=True)
 
     with tab3:
         st.markdown("### Interaction Effects")
-        col1,col2 = st.columns(2)
+        if os.path.exists(fp("fig06a_income_complaint_heatmap.png")):
+            st.image(fp("fig06a_income_complaint_heatmap.png"), caption="Income x 311 Complaint Failure Rate", use_container_width=True)
+        col1, col2 = st.columns(2)
         with col1:
-            if os.path.exists(fp("06_interaction_heatmaps.png")):
-                st.image(fp("06_interaction_heatmaps.png"), use_container_width=True)
+            if os.path.exists(fp("fig06b_cuisine_borough_heatmap.png")):
+                st.image(fp("fig06b_cuisine_borough_heatmap.png"), caption="Cuisine x Borough Failure Rate", use_container_width=True)
         with col2:
-            # try both possible filenames
-            f7 = fp("07_interaction_and...tion_heatmaps.png")
-            f7b = fp("07_interaction_annotation_heatmaps.png")
-            if os.path.exists(f7):
-                st.image(f7, use_container_width=True)
-            elif os.path.exists(f7b):
-                st.image(f7b, use_container_width=True)
+            if os.path.exists(fp("fig06c_borough_month_heatmap.png")):
+                st.image(fp("fig06c_borough_month_heatmap.png"), caption="Borough x Month Failure Rate", use_container_width=True)
+        if os.path.exists(fp("fig07_correlation_heatmap.png")):
+            st.image(fp("fig07_correlation_heatmap.png"), caption="Numeric Predictor Correlation Heatmap", use_container_width=True)
 
     with tab4:
         st.markdown("### PCA — Dimensionality Reduction")
-        col1,col2 = st.columns(2)
+        col1, col2 = st.columns(2)
         with col1:
-            if os.path.exists(fp("09_pca_scree_projection.png")):
-                st.image(fp("09_pca_scree_projection.png"), caption="Scree Plot & PCA Projection", use_container_width=True)
+            if os.path.exists(fp("fig09a_pca_variance.png")):
+                st.image(fp("fig09a_pca_variance.png"), caption="Scree Plot & Cumulative Variance", use_container_width=True)
+            if os.path.exists(fp("fig10a_pca_loadings.png")):
+                st.image(fp("fig10a_pca_loadings.png"), caption="PC1 & PC2 Feature Loadings", use_container_width=True)
         with col2:
-            if os.path.exists(fp("10_pca_loadings_borough.png")):
-                st.image(fp("10_pca_loadings_borough.png"), caption="PCA Loadings by Borough", use_container_width=True)
+            if os.path.exists(fp("fig09b_pca_projection.png")):
+                st.image(fp("fig09b_pca_projection.png"), caption="PCA 2D Projection by Outcome", use_container_width=True)
+            if os.path.exists(fp("fig10b_pc1_borough.png")):
+                st.image(fp("fig10b_pc1_borough.png"), caption="PC1 Distribution by Borough", use_container_width=True)
+        st.markdown("### KMeans Clustering")
+        col1, col2 = st.columns(2)
+        with col1:
+            if os.path.exists(fp("fig11_kmeans_selection.png")):
+                st.image(fp("fig11_kmeans_selection.png"), caption="KMeans Elbow & Silhouette", use_container_width=True)
+            if os.path.exists(fp("fig12a_cluster_overview.png")):
+                st.image(fp("fig12a_cluster_overview.png"), caption="Cluster Size & Failure Rate", use_container_width=True)
+        with col2:
+            if os.path.exists(fp("fig12b_cluster_profiles_pca.png")):
+                st.image(fp("fig12b_cluster_profiles_pca.png"), caption="Cluster Profiles & PCA Projection", use_container_width=True)
+            if os.path.exists(fp("fig13_cluster_composition.png")):
+                st.image(fp("fig13_cluster_composition.png"), caption="Cluster Composition by Borough & Outcome", use_container_width=True)
 
     with tab5:
         st.markdown("### Yelp & Neighborhood")
