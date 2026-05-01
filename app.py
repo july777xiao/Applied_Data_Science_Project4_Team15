@@ -10,6 +10,8 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 import os
+import sklearn
+st.sidebar.caption(f"sklearn: {sklearn.__version__}")
 
 st.set_page_config(
     page_title="NYC Restaurant Intelligence",
